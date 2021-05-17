@@ -8,11 +8,21 @@ namespace SumIntegers
     {
         static void Main(string[] args)
         {
-			string result = Calculate.Process(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Line of input");
+                string result = Calculate.Process(Console.ReadLine());
 
-			Console.Write(result);
-
-			Console.ReadLine();
+                Console.Write(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro: {ex}");
+            }
+            finally
+            {
+                Console.ReadLine();
+            }
 		}
 
 
